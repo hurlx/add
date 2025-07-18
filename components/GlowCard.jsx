@@ -2,28 +2,29 @@
 
 import { useRef } from "react";
 
-const GlowCard = ({ index, children }) => {
+const GlowCard = ({ card, index, children }) => {
   const cardRefs = useRef([]);
 
-  const updateAngle = (clientX, clientY, card) => {
-    const rect = card.getBoundingClientRect();
+  const updateAngle = (clientX, clientY, element) => {
+    const rect = element.getBoundingClientRect();
     const x = clientX - rect.left - rect.width / 2;
     const y = clientY - rect.top - rect.height / 2;
-    let angle = ((Math.atan2(y, x) * 180) / Math.PI + 360) % 360;
-    card.style.setProperty("--start", `${angle + 60}deg`);
+    let angle = (Math.atan2(y, x) * 180) / Math.PI;
+    angle = (angle + 360) % 360;
+    element.style.setProperty("--start", `${angle + 60}deg`);
   };
 
-  const handleMouseMove = (idx) => (e) => {
-    const card = cardRefs.current[idx];
-    if (!card) return;
-    updateAngle(e.clientX, e.clientY, card);
+  const handleMouseMove = (i) => (e) => {
+    const element = cardRefs.current[i];
+    if (!element) return;
+    updateAngle(e.clientX, e.clientY, element);
   };
 
-  const handleTouchMove = (idx) => (e) => {
-    const card = cardRefs.current[idx];
-    if (!card || !e.touches.length) return;
+  const handleTouchMove = (i) => (e) => {
+    const element = cardRefs.current[i];
+    if (!element || !e.touches.length) return;
     const { clientX, clientY } = e.touches[0];
-    updateAngle(clientX, clientY, card);
+    updateAngle(clientX, clientY, element);
   };
 
   return (
@@ -41,3 +42,4 @@ const GlowCard = ({ index, children }) => {
 };
 
 export default GlowCard;
+
