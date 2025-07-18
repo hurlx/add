@@ -13,12 +13,12 @@ const slides = [
 const Header = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [showArrow, setShowArrow] = useState(true); 
+  const [showArrow, setShowArrow] = useState(true); // controls arrow visibility
   const imageRef = useRef(null);
   const textRef = useRef(null);
   const router = useRouter();
 
-
+  // Slide auto change
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -26,7 +26,7 @@ const Header = () => {
     return () => clearInterval(interval);
   }, []);
 
-
+  // Animate text on slide change
   useEffect(() => {
     gsap.fromTo(
       textRef.current,
@@ -35,7 +35,7 @@ const Header = () => {
     );
   }, [currentSlide]);
 
-
+  // Scroll listener to hide arrow on scroll
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 30) {
@@ -97,14 +97,14 @@ const Header = () => {
         </div>
       </div>
 
-      
+      {/* Down Arrow for small screens */}
       <div
   className={`fixed bottom-20 left-1/2 -translate-x-1/2 text-pink-400 text-4xl select-none max-sm:block hidden transition-opacity duration-500 ${
     showArrow ? "opacity-100" : "opacity-0 pointer-events-none"
   }`}
   aria-label="Scroll down"
 >
-       
+        {/* You can replace this SVG with any arrow icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-10 w-10 animate-bounce"
