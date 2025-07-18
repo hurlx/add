@@ -32,6 +32,16 @@ const products = [
     id: "3",
     slug: 'canvas'
   },
+  {
+    name: "Orbit Tote",
+    shortDescription: "Minimal tote with smart compartments",
+    image: "/images/Brown.jpg",
+    hoverImage: "/images/Coffee.jpg",
+    price: 360,
+    tag: "",
+    id: "4",
+    slug: 'gg'
+  },
   // Add more products here
 ];
 
