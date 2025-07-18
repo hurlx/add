@@ -23,6 +23,29 @@ Spacious interior fits a 13" laptop, water bottle, and daily essentials.
 Includes an interior zip pocket and magnetic snap closure.`
   },
   {
+    name: "cof",
+    shortDescription: "Sculptural form meets soft structure",
+    image: "/images/Brown.jpg",
+    hoverImage: "/images/Coffee.jpg",
+    price: 420,
+    tag: "Limited",
+    id: "1",
+    slug: "gg",
+    images: [
+      "/images/Coffee.jpg",
+      "/images/Brown.jpg",
+      "/images/Coffee.jpg"
+    ],
+    colors: [
+      { name: "Black", hex: "#000000" },
+      { name: "Beige", hex: "#f5f5dc" },
+      { name: "Wine", hex: "#722f37" }
+    ],
+    extraDescription: `Crafted from premium vegan leather with hand-stitched detailing.
+Spacious interior fits a 13" laptop, water bottle, and daily essentials.
+Includes an interior zip pocket and magnetic snap closure.`
+  },
+  {
     name: "Nova Mini Cross",
     shortDescription: "Sleek, lightweight daily essential",
     image: "/images/H0ae4bbef278548c2bd6c0ad514d2b96d8.jpg_720x720q50.jpg",
