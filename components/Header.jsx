@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useRouter }          from "next/navigation";
-import gsap                   from "gsap";
-import AnimatedTitle1         from "./AnimatedTitle1";
+import { useRouter } from "next/navigation";
+import gsap from "gsap";
+import AnimatedTitle1 from "./AnimatedTitle1";
 
 const slides = [
   { image: "/images/8.jpg", title: "تصاميم تُكمل إطلالتك" },
@@ -13,23 +13,24 @@ const slides = [
 
 export default function Header() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [loading, setLoading]         = useState(false);
-  const [showArrow, setShowArrow]     = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [showArrow, setShowArrow] = useState(true);
   const imageRef = useRef(null);
-  const textRef  = useRef(null);
-  const router   = useRouter();
+  const textRef = useRef(null);
+  const router = useRouter();
 
-  // auto-rotate
+  // Slide auto-rotate
   useEffect(() => {
     const id = setInterval(
-      () => setCurrentSlide(i => (i + 1) % slides.length),
+      () => setCurrentSlide((prev) => (prev + 1) % slides.length),
       5000
     );
     return () => clearInterval(id);
   }, []);
 
-  // text animation
+  // Animate the title
   useEffect(() => {
+    if (!textRef.current) return;
     gsap.fromTo(
       textRef.current,
       { y: 40, opacity: 0 },
@@ -37,7 +38,7 @@ export default function Header() {
     );
   }, [currentSlide]);
 
-  // hide arrow on scroll
+  // Hide arrow on scroll
   useEffect(() => {
     const onScroll = () => setShowArrow(window.scrollY < 30);
     window.addEventListener("scroll", onScroll);
@@ -55,13 +56,83 @@ export default function Header() {
         id="hero"
         className="relative flex justify-center sm:mt-7 max-sm:-mt-20 items-center h-screen"
       >
-        {/* … all your markup here … */}
+        <div className="w-full h-[90%] max-sm:h-[60%] flex items-center justify-center overflow-hidden">
+          <div className="relative w-full h-full max-h-[100vh] max-w-[100vw] overflow-hidden rounded-xl">
+            <div className="absolute inset-0 z-0">
+              {slides.map((slide, index) => (
+                <img
+                  key={index}
+                  ref={index === currentSlide ? imageRef : null}
+                  src={slide.image}
+                  alt={`Slide ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 gap-6">
+              <h1
+                ref={textRef}
+                dir="rtl"
+                className="text-4xl font-bold text-black drop-shadow-lg"
+              >
+                <AnimatedTitle1
+                  title={slides[currentSlide].title}
+                  isArabic
+                />
+              </h1>
+
+              <button
+                onClick={handleClick}
+                disabled={loading}
+                className={`relative px-8 py-3 rounded-xl bg-pink-400/40 backdrop-blur-md border border-white/30 text-white font-semibold tracking-wide overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-400/50 ${
+                  loading ? "cursor-not-allowed opacity-70" : ""
+                }`}
+                aria-label="Shop Now"
+              >
+                <span className="absolute top-0 left-[-50%] w-[50%] h-full bg-gradient-to-r from-white/40 to-transparent blur-md opacity-0 pointer-events-none transition-opacity duration-500 hover:opacity-80 animate-shine"></span>
+                <span className="relative z-10">
+                  {loading ? "جارٍ التحميل..." : "تسوقي الآن"}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Down Arrow for small screens */}
+        <div
+          className={`fixed bottom-20 left-1/2 -translate-x-1/2 text-pink-400 text-4xl select-none max-sm:block hidden transition-opacity duration-500 ${
+            showArrow ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+          aria-label="Scroll down"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
       </div>
 
       <style jsx>{`
         @keyframes shine {
-          0%   { transform: translateX(-100%); }
-          100% { transform: translateX(200%);  }
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(200%);
+          }
         }
         .animate-shine {
           animation-play-state: paused;
