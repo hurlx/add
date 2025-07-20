@@ -5,27 +5,27 @@ const Item = () => {
   // Array of images for the first slider
   const images1 = [
     "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
     "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
     "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
   ];
 
   // Array of images for the second slider
   const images2 = [
     "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
     "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
     "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
-    "/images/1.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
   ];
 
   return (
