@@ -24,15 +24,15 @@ const Test = () => {
 			</section>
 
 			<section className="max-w-4xl mx-auto mb-16">
-				<h2 className="text-3xl font-semibold mb-4">قصتا</h2>
+				<h2 className="text-3xl font-semibold mb-4">قصتنا</h2>
 				<p className="text-gray-500 leading-relaxed">
 					قصتنا بدأت برغبتنا في خلق تجربة تسوق مميزة وموثوقة تمنحك
 					الأناقة التي تستحقينها
 				</p>
 			</section>
 
-			<section className="max-w-4xl mx-auto">
-				<h2 className="text-3xl font-semibold mb-4">لماذا نحن؟</h2>
+			<section className="max-w-4xl mx-auto text-gray-500">
+				<h2 className="text-3xl text-gray-800 font-semibold mb-4">لماذا نحن؟</h2>
 				<div className="grid md:grid-cols-3 gap-6">
 					<div className="p-6 rounded-xl bg-white shadow">
 						<p>
@@ -42,7 +42,6 @@ const Test = () => {
 					</div>
 					<div className="p-6 rounded-xl bg-white shadow">
 						<p>
-							نحن متجر إلكتروني سوري متخصص في بيع الحقائب النسائية المستوردة .
 							نقدم لكِ تشكيلة واسعة من التصاميم العصرية والممييزة، مع حرصنا على
 							اختيار أفضل المنتجات بعناية لتجمع بين الفخامة والسعر المناسب.
 							هدفنا أن نوفر لكِ تجربة تسوق سهلة ومريحة داخل سوريا،
