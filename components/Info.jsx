@@ -55,7 +55,7 @@ const Info = () => {
 				<AnimatedTitle title="الأناقة تبدأ من هنا" isArabic />
 			</h1>
 
-			<div className="" ref={cardWrapperRef}>
+			<div ref={cardWrapperRef}>
 				<Card />
 			</div>
 		</div>
