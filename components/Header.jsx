@@ -5,9 +5,9 @@ import gsap from "gsap";
 import AnimatedTitle1 from "./AnimatedTitle1";
 
 const slides = [
-	{ image: "/images/1.jpg", title: "تصاميم تُكمل إطلالتك" },
-	{ image: "/images/2.jpg", title: "أناقة تُرافقك أينما كنت" },
-	{ image: "/images/3.jpg", title: "اختر حقيبتك المفضلة" },
+	{ image: "/images/3/2.jpg", title: "تصاميم تُكمل إطلالتك" },
+	{ image: "/images/3/3.jpg", title: "أناقة تُرافقك أينما كنت" },
+	{ image: "/images/3/4.jpg", title: "اختر حقيبتك المفضلة" },
 ];
 
 const Header = () => {
