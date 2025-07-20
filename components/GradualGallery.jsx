@@ -36,9 +36,9 @@ export default function GradualGallery() {
 
   // Define your image links and slugs here
   const images = [
-    { src: "/images/1.jpg", slug: "gg" },
-    { src: "/images/1.jpg", slug: "canvas" },
-    { src: "/images/1.jpg", slug: "tote" },
+    { src: "/images/1/Kaki.jpg", slug: "gg" },
+    { src: "/images/2/White.jpg", slug: "aa" },
+    { src: "/images/4/White.jpg", slug: "ab" },
   ];
 
   const handleClick = (slug, index) => {
@@ -49,11 +49,11 @@ export default function GradualGallery() {
   };
 
   return (
-    <div className="mt-24 select-none z-10">
-      <h1 dir="rtl" className="mb-10 font-bold z-10">
+    <div className="mt-20 select-none z-10">
+      <h1 dir="rtl" className=" font-bold z-10">
         <AnimatedTitle title={`كل قطعة... حكايةُ ذوق`} isArabic />
       </h1>
-      <div className="flex justify-center gap-6 px-6 py-16 sel z-10">
+      <div className="flex justify-center gap-6 px-6 py-10 pb-16 sel z-10">
         {images.map(({ src, slug }, index) => (
           <div
             key={index}
