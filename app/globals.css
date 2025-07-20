@@ -6,7 +6,6 @@ html,body {
     background-color: #f4d7e6;
     -webkit-user-select: none;
     user-select: none;
-    overflow-x: hidden;
 }
 
 @font-face {
@@ -168,7 +167,7 @@ html,body {
     }
     .slider{
     width: 100%;
-    height: 350px;
+    height: 202px;
     overflow: hidden;
     mask-image: linear-gradient(
         to right,
@@ -370,7 +369,6 @@ html,body {
   width: 100%;
   height: 100%;
   animation: floating 2s infinite ease-in-out;
-  
 }
 
 @keyframes floating {
@@ -442,26 +440,4 @@ html,body {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-.perspective {
-  perspective: 1000px;
-}
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-@media (max-width: 639px) {
-  .card:not(.active-card) {
-    display: none;
-  }
 }
