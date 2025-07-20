@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import LenisWrapper from "@/components/LenisWrapper";
 import Link from "next/link";
+import BackButton from "@/components/BackButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
 </div>
 
         <main className="relative z-10">
+          <BackButton />
           {children}
           <Footer />
         </main>
