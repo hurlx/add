@@ -50,12 +50,12 @@ const Info = () => {
 	}, []);
 
 	return (
-		<div ref={sectionRef} className="pt-24">
+		<div ref={sectionRef}>
 			<h1 dir="rtl" className="text-black font-bold text-3xl text-center mb-12">
 				<AnimatedTitle title="الأناقة تبدأ من هنا" isArabic />
 			</h1>
 
-			<div className="max-sm:-my-24" ref={cardWrapperRef}>
+			<div className="" ref={cardWrapperRef}>
 				<Card />
 			</div>
 		</div>
