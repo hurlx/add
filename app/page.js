@@ -43,22 +43,26 @@ export default function Home() {
   const sliders = [
     {
       slug: "gg",
-      images: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+      images: [
+       "/images/1/Coffee.jpg",
+      "/images/1/Brown.jpg",
+      "/images/1/Kaki.jpg",
+        ],
     },
     {
-      slug: "canvas",
+      slug: "aa",
       images: [
-        "/images/3.jpg",
-        "/images/H0ae4bbef278548c2bd6c0ad514d2b96d8.jpg_720x720q50.jpg",
-        "/images/4.jpg",
+       "/images/2/Black.jpg",
+      "/images/2/Kaki.jpg",
+      "/images/2/White.jpg",
       ],
     },
     {
-      slug: "tote",
+      slug: "ab",
       images: [
-        "/images/H0ae4bbef278548c2bd6c0ad514d2b96d8.jpg_720x720q50.jpg",
-        "/images/4.jpg",
-        "/images/3.jpg",
+        "/images/4/Black.jpg",
+      "/images/4/Brown.jpg",
+      "/images/4/White.jpg",
       ],
     },
   ];
