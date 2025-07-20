@@ -76,14 +76,15 @@ export default function BagDetailPage(props) {
 					</div>
 				</div>
 
-				<div className="flex gap-4 mt-6">
+                {/* 👇 CHANGES ARE HERE */}
+				<div className="flex gap-4 mt-6 overflow-x-auto flex-nowrap w-full justify-center pb-2 scrollbar-hide"> {/* Added overflow-x-auto, flex-nowrap, w-full, justify-center, pb-2 */}
 					{bag.images?.map((img, i) => (
 						<img
 							key={i}
 							src={img}
 							alt={`صورة مصغرة-${i}`}
 							onClick={() => setSelectedImage(img)}
-							className={`w-20 h-20 rounded-md object-cover cursor-pointer border-2 ${
+							className={`flex-shrink-0 w-20 h-20 rounded-md object-cover cursor-pointer border-2 ${ // Added flex-shrink-0
 								selectedImage === img ? "border-black" : "border-transparent"
 							}`}
 						/>
@@ -113,8 +114,7 @@ export default function BagDetailPage(props) {
     .animate-shine {
       animation: shine 1.8s linear infinite;
     }
-  `}</style>
-				</a>
+  `}</style>				</a>
 			</div>
 		</main>
 	);
