@@ -3,44 +3,24 @@ import GlassMorphCard from "./End";
 
 const products = [
   {
-    name: "Aeris Edge Bag",
-    shortDescription: "Sculptural form meets soft structure",
-    image: "/images/H0ae4bbef278548c2bd6c0ad514d2b96d8.jpg_720x720q50.jpg",
-    hoverImage: "/images/H5d80da696dab429c913933ac36e0a34cF.jpg_720x720q50.jpg",
-    price: 420,
+    name: "Orbit Tote",
+    shortDescription: "Minimal tote with smart compartments",
+    image: "/images/1/Kaki.jpg",
+    hoverImage: "/images/1/Coffee.jpg",
+    price: 360,
     tag: "",
     id: "1",
-    slug: 'tote'
+    slug: 'gg'
   },
   {
-    name: "Nova Mini Cross",
-    shortDescription: "Sleek, lightweight daily essential",
-    image: "/images/H0ae4bbef278548c2bd6c0ad514d2b96d8.jpg_720x720q50.jpg",
-    hoverImage: "/images/H5d80da696dab429c913933ac36e0a34cF.jpg_720x720q50.jpg",
-    price: 280,
+    name: "Wavea",
+    shortDescription: "حقيبة يد جلدية أنيقة ، بتصميم مموّج يدوي ومقبض علوي مجعد، مزودة بسلسلة ذهبية ووسم فاخر.",
+    image: "/images/2/Kaki.jpg",
+    hoverImage: "/images/2/White.jpg",
+    price: 360,
     tag: "",
     id: "2",
-    slug: 'canvas-tote'
-  },
-  {
-    name: "Orbit Tote",
-    shortDescription: "Minimal tote with smart compartments",
-    image: "/images/H0ae4bbef278548c2bd6c0ad514d2b96d8.jpg_720x720q50.jpg",
-    hoverImage: "/images/H5d80da696dab429c913933ac36e0a34cF.jpg_720x720q50.jpg",
-    price: 360,
-    tag: "",
-    id: "3",
-    slug: 'canvas'
-  },
-  {
-    name: "Orbit Tote",
-    shortDescription: "Minimal tote with smart compartments",
-    image: "/images/Brown.jpg",
-    hoverImage: "/images/Coffee.jpg",
-    price: 360,
-    tag: "",
-    id: "4",
-    slug: 'gg'
+    slug: 'aa'
   },
   // Add more products here
 ];
