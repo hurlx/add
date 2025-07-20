@@ -370,6 +370,7 @@ html,body {
   width: 100%;
   height: 100%;
   animation: floating 2s infinite ease-in-out;
+  
 }
 
 @keyframes floating {
@@ -451,4 +452,16 @@ html,body {
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media (max-width: 639px) { /* This targets screens smaller than Tailwind's 'sm' breakpoint */
+  .card:not(.active-card) {
+    display: none;
+  }
 }
